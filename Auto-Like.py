@@ -9,6 +9,7 @@ CONSUMER_SECRET = environ['CONSUMER_SECRET']
 ACCESS_KEY = environ['ACCESS_KEY']
 ACCESS_SECRET = environ['ACCESS_SECRET']
 USER_LIST = os.environ.get('USER_LIST').split(",")
+USER_SLIST = str(USER_LIST[i]).strip('[]')
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 
@@ -16,7 +17,7 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
-Users = [USER_LIST]
+Users = [USER_SLIST]
 
 n = 5
 while n > 0:
