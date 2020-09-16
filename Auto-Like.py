@@ -9,7 +9,7 @@ CONSUMER_SECRET = environ['CONSUMER_SECRET']
 ACCESS_KEY = environ['ACCESS_KEY']
 ACCESS_SECRET = environ['ACCESS_SECRET']
 USER_LIST = json.loads(os.environ['USER_LIST'])
-USER_SLIST = str(USER_LIST).strip('[]')
+USER_SLIST = str(USER_LIST).replace("'", '"')
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 
