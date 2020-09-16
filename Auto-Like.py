@@ -15,7 +15,7 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
-Users = [USER_LIST]
+Users = ["Hehe_tv","ceilidhsimone","WHOtheFisJC","spoonie4life","Hehes_Wifey"]
 
 n = 5
 while n > 0:
