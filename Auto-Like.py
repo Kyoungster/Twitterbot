@@ -31,10 +31,11 @@ while n > 0:
                 tweet.favorite()
                 print('Tweet Liked')
                 print("\n")
-                time.sleep(5)
+                time.sleep(15)
             except tweepy.TweepError as e:
                 print(e.reason)
                 print("\n")
+                time.sleep(15)
             except StopIteration:
                 break
     time.sleep(600)        
